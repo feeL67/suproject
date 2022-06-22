@@ -6,9 +6,9 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public enum ROLLTYPE {
-    HOSOMAKI(80, 2),
-    NORIMAKI(130, 3),
-    UROMAKI(130, 3);
+    HOSOMAKI(80, 1),
+    NORIMAKI(130, 2),
+    UROMAKI(130, 2);
 
     private int riceWeight;
     private int price;

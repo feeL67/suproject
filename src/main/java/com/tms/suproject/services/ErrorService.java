@@ -9,6 +9,7 @@ import java.util.List;
 
 @Service
 public class ErrorService {
+
     public boolean getErrors(BindingResult bindingResult, ModelMap model) {
         List<FieldError> fieldErrors = bindingResult.getFieldErrors();
         for (FieldError fieldError : fieldErrors) {

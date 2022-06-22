@@ -5,8 +5,9 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class IngredientValidator {
+
     public boolean checkIngredients(Roll roll) {
-        if (roll.getInner().getInnerIngredients().size() == 0 || roll.getCover().getCoverIngredients().size() == 0) {
+        if (roll == null || roll.getInner().getInnerIngredients().size() == 0 || roll.getCover().getCoverIngredients().size() == 0) {
             return false;
         } else {
             return true;
