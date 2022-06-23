@@ -24,22 +24,18 @@ import java.util.stream.Collectors;
 @RequestMapping("/")
 public class RollController {
 
-    private final InnerService innerService;
-    private final CoverService coverService;
-    private final RollService rollService;
-    private final OrderService orderService;
-    private final ErrorService errorService;
-    private final IngredientValidator ingredientValidator;
-
     @Autowired
-    public RollController(InnerService innerService, CoverService coverService, RollService rollService, OrderService orderService, ErrorService errorService, IngredientValidator ingredientValidator) {
-        this.innerService = innerService;
-        this.coverService = coverService;
-        this.rollService = rollService;
-        this.orderService = orderService;
-        this.errorService = errorService;
-        this.ingredientValidator = ingredientValidator;
-    }
+    private InnerService innerService;
+    @Autowired
+    private CoverService coverService;
+    @Autowired
+    private RollService rollService;
+    @Autowired
+    private OrderService orderService;
+    @Autowired
+    private ErrorService errorService;
+    @Autowired
+    private IngredientValidator ingredientValidator;
 
     @GetMapping()
     public String getHelloPage() {
